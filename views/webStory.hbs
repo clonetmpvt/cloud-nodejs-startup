@@ -1,0 +1,293 @@
+<!doctype html>
+<html amp lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{{page.seo.title}} Web Story</title>
+    <meta property="description" name="description" content="{{page.seo.description}} Web Story" />
+    <meta property="keywords" name="keywords" content="{{page.seo.keywords}}" />
+
+    <link rel="manifest" href="{{SITE_URL}}/images/manifest.json" />
+    <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1" />
+    <meta data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes" />
+    <meta data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="{{SITE_NAME}}" />
+    <meta data-hid="theme-color" name="theme-color" content="#553a7d" />
+    <meta data-hid="og:type" name="og:type" property="og:type" content="website" />
+    <meta data-hid="og:title" name="og:title" property="og:title" content="{{page.seo.title}} Web Story" />
+    <meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="{{SITE_NAME}}" />
+    <meta name="og:description" property="og:description" content="{{page.seo.description}}" />
+    <meta name="og:image" property="og:image" content="{{SITE_URL}}/thumb/web-story{{page.image}}" />
+
+    <link rel="icon" type="image/x-icon" href="{{SITE_URL}}/favicon.ico" />
+    <link rel="shortcut icon" href="{{SITE_URL}}/thumb/icon_512/images/logo.webp" sizes="512x512" />
+    <link rel="apple-touch-icon" href="{{SITE_URL}}/thumb/icon_512/images/logo.webp" sizes="512x512" />
+
+    <meta name="robots" content="max-image-preview:large">
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="{{page.seo.title}}  Web Story | {{SITE_NAME}}">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:url" content="{{page.canonical}}">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{page.canonical}}">
+    <meta property="twitter:title" content="{{page.seo.title}}  Web Story | {{SITE_NAME}}">
+    <meta property="twitter:description" content="{{page.seo.description}}">
+    <meta property="twitter:image" content="{{SITE_URL}}/thumb/web-story{{page.image}}">
+
+
+
+
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <!-- ## Setup -->
+    <!-- AMP Stories are written using AMPHTML and they use their own AMP extension: `amp-story`. The first step is to import the `amp-story` in the header. -->
+
+    <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
+    <!-- AMP Stories can make use of other AMP extensions such as `amp-video`. However, AMP Stories support only a subset of the available AMP extensions. You can find a full list of the supported extensions [here](/content/amp-dev/documentation/components/reference/amp-story.md#children-of-amp-story-grid-layer). -->
+
+
+    <link rel="canonical" href="{{page.canonical}}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+    <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+
+
+    <style amp-boilerplate>
+        body {
+            -webkit-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -moz-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            -ms-animation: -amp-start 8s steps(1, end) 0s 1 normal both;
+            animation: -amp-start 8s steps(1, end) 0s 1 normal both
+        }
+
+        @-webkit-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-moz-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-ms-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @-o-keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+
+        @keyframes -amp-start {
+            from {
+                visibility: hidden
+            }
+
+            to {
+                visibility: visible
+            }
+        }
+    </style><noscript>
+        <style amp-boilerplate>
+            body {
+                -webkit-animation: none;
+                -moz-animation: none;
+                -ms-animation: none;
+                animation: none
+            }
+        </style>
+    </noscript>
+    <!-- Stories can be styled using CSS: -->
+    <style amp-custom>
+        amp-story {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI ", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji ", "Segoe UI Emoji ", "Segoe UI Symbol ";
+        }
+
+        amp-story-page * {
+            color: white;
+            text-align: center;
+        }
+
+        [template=thirds] {
+            padding: 0;
+        }
+
+        .data_custom {
+            /* background: rgb(0, 0, 0);
+            background: linear-gradient(360deg, rgba(0, 0, 0, 1) 0%, rgba(112, 112, 112, 0.4990371148459384) 50%, rgba(255, 255, 255, 0) 100%); */
+            color: #fff;
+        }
+
+        .text_wrapper {
+            background: rgb(0, 0, 0);
+            background: linear-gradient(360deg, rgba(0, 0, 0, 1) 30%, rgba(112, 112, 112, 0.4990371148459384) 80%, rgba(255, 255, 255, 0) 100%);
+            position: absolute;
+            bottom: 0%;
+            padding: 50px 20px 50px;
+            font-weight: 400;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            margin-bottom: 50px;
+        }
+
+        .data_custom h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-transform: capitalize;
+            margin-bottom: 50px;
+        }
+
+        html,
+        html * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .attachment_wrapper {
+            color: #333;
+            padding: 0px 20px 10px 20px
+        }
+
+        .attachment_wrapper * {
+            color: #333;
+        }
+
+        .attachment_wrapper a {
+            margin-bottom: 30px;
+            display: block;
+            font-weight: 700;
+        }
+
+        .attachment_wrapper p {
+            font-size: 14px;
+            line-height: 1.75;
+            color: #333;
+            font-weight: 500;
+            text-transform: capitalize;
+        }
+
+        .attachment_wrapper span {
+            color: #333;
+            font-weight: 700;
+        }
+
+        .attachment_wrapper span a {
+            color: #333;
+            font-weight: 700;
+            font-size: 24px;
+        }
+    </style>
+    <script type="application/ld+json">
+        {{{page.json_ld}}}    </script>
+    {{#showWebStoryAds}}
+    <script async custom-element="amp-story-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-story-auto-ads-0.1.js"></script>
+    {{/showWebStoryAds}}
+</head>
+
+<body>
+    <amp-story standalone title="{{page.title}}" publisher="{{SITE_NAME}}"
+        publisher-logo-src="{{SITE_URL}}/thumb/icon_512/images/logo.webp"
+        poster-portrait-src="{{SITE_URL}}/thumb/web-story-portrait{{page.image}}"
+        poster-square-src="{{SITE_URL}}/thumb/web-story-square{{page.image}}"
+        poster-landscape-src="{{SITE_URL}}/thumb/web-story{{page.image}}" supports-landscape>
+
+
+        {{#isLive}}
+        <amp-analytics type="gtag" data-credentials="include">
+            <script type="application/json">
+                {
+                    "vars": {
+                        "gtag_id": "{{TRACKING_ID}}",
+                        "config": {
+                            "{{TRACKING_ID}}": {
+                                "groups": "default"
+                            }
+                        }
+                    }
+                }
+            </script>
+        </amp-analytics>
+        {{#showWebStoryAds}}
+        <amp-story-auto-ads>
+            <script type="application/json">
+                {
+                    "ad-attributes": {
+                        "type": "adsense",
+                        "data-ad-client": "ca-pub-5236527217763874",
+                        "data-ad-slot": "4633082250"
+                    }
+                }
+            </script>
+        </amp-story-auto-ads>
+        {{/showWebStoryAds}}
+        {{/isLive}}
+
+        {{#each stories}}
+        <amp-story-page id="page-{{_id}}">
+            <amp-story-grid-layer template="fill">
+                <amp-img src="{{SITE_URL}}/thumb/web-story{{image}}" width="1280" height="960" layout="responsive"
+                    alt="{{title}} web story">
+                </amp-img>
+            </amp-story-grid-layer>
+            <amp-story-grid-layer template="vertical" class="data_custom">
+                <div class="text_wrapper">
+                    {{#ifCondOper @index "=" 0}} <h1><a href="{{SITE_URL}}/article/{{slug}}">{{title}}</a></h1>
+                    {{else}}
+                    <h2><a href="{{SITE_URL}}/article/{{slug}}">{{title}}</a></h2>
+                    {{/ifCondOper}}
+                </div>
+            </amp-story-grid-layer>
+            <amp-story-page-attachment layout="nodisplay">
+                <div class="attachment_wrapper">
+                    <h2>{{title}}</h2>
+                    <p>{{sub_title}}</p>
+                    <a title="{{title}}" href="{{SITE_URL}}/article/{{slug}}">Read
+                        Full Article</a>
+                    <span> Posted By : <a title="{{SITE_NAME}}" href="{{SITE_URL}}"> {{SITE_NAME}}</a></span>
+                </div>
+            </amp-story-page-attachment>
+        </amp-story-page>
+        {{/each}}
+
+
+        <amp-story-page id="layout-demo">
+            <amp-story-grid-layer template="thirds">
+                {{#each stories}}
+                <amp-img src="{{SITE_URL}}/thumb/web-story{{image}}" width="560" height="420" layout="responsive"
+                    alt="{{title}}">
+                </amp-img>
+                {{/each}}
+
+            </amp-story-grid-layer>
+        </amp-story-page>
+    </amp-story>
+</body>
+
+</html>

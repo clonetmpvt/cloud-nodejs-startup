@@ -1,0 +1,59 @@
+<title>{{ pagedata.seo_meta.title }}</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes">
+<meta data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="CloneTM">
+<meta data-hid="theme-color" name="theme-color" content="#377dff">
+<meta data-hid="og:type" name="og:type" property="og:type" content="website">
+<meta data-hid="og:title" name="og:title" property="og:title" content="CloneTM">
+<meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="CloneTM">
+<meta data-hid="og:description" name="og:description" property="og:description" content="CloneTM">
+<meta data-hid="description" name="description" content="{{ pagedata.seo_meta.description  }}">
+<meta data-hid="keywords" name="keywords" content="{{ pagedata.seo_meta.keywords  }}">
+<link rel="icon" type="image/x-icon" href="{{app_url}}/../favicon.ico">
+<link rel="canonical" href="{{siteurl}}/{{ pagedata.slug }}">
+<link rel="manifest" href="{{app_url}}/../manifest.json">
+<link rel="shortcut icon" href="{{app_url}}/../icons/icon_64.9mld2VBMsQ$.png">
+<link rel="apple-touch-icon" href="{{app_url}}/../icons/icon_512.9mld2VBMsQ$.png" sizes="512x512">
+{{#ifCond pagedata.slug "home"}}
+<link rel="amphtml" href="{{siteurl}}/home/amp">
+{{else}}
+<link rel="amphtml" href="{{siteurl}}/{{ pagedata.slug }}/amp">
+{{/ifCond}}
+<!-- Favicon -->
+<link rel="shortcut icon" href="{{app_url}}/../favicon.ico">
+<link rel="stylesheet" href="{{app_url}}/assets/css/app.css">
+{{!--
+<link rel="stylesheet" href="{{app_url}}/fontawesome/css/all.min.css"> --}}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script type="application/ld+json">
+     {
+    "@context": "http://schema.org/",
+    "@type": "Product",
+    "name": "{{ pagedata.seo_meta.title  }}",
+    "image": "https://d2n8jhm3slkl1f.cloudfront.net/clonescloud/assets/images/cc-product/1508745478-fund-for-idea-ipad.png",
+    "description": "{{ pagedata.seo_meta.title  }}",
+    "brand": {
+        "@type": "Thing",
+        "name": "{{ pagedata.seo_meta.title  }}"
+    }
+    ,
+    "aggregateRating": {
+        "@type": "AggregateRating", "ratingValue": "{{ pagedata.rating }}", "reviewCount": "{{ pagedata.rating_count }}"
+    }
+    ,
+    "offers": {
+        "@type": "Offer",
+        "priceCurrency": "USD",
+        "price": "{{ pagedata.price }}",
+        "priceValidUntil": "2020-10-02",
+        "itemCondition": "{{siteurl}}/{{ pagedata.slug }}",
+        "availability": "{{siteurl}}/{{ pagedata.slug }}",
+        "seller": {
+            "@type": "Organization", "name": "CloneTM"
+        }
+    }
+}
+</script>

@@ -1,0 +1,231 @@
+<div class="archives post post1 ">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="bridcrumb p-0 text-center"> <a href="{{SITE_URL}}">Home</a> / <a
+                        href="{{SITE_URL}}/article">Articles</a> / {{ page.title }}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12 mb-5 ">
+                <!-- 728 × 90 px -->
+                {{#showMobile isMobile}}
+                {{> common/300_250}}
+                {{else}}
+                {{> common/728_90}}
+                {{/showMobile}}
+            </div>
+            <div class="col-md-6 col-lg-8 ">
+                <div class="shadow61 white_bg">
+                    <div class="padding20 white_bg
+						">
+                        <div class="single_post_heading">
+                            <h1>{{ page.title }}</h1>
+                            <div class="space-10"></div>
+                            <p>{{ page.sub_title }}</p>
+                        </div>
+                        <div class="space-20"></div>
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="page_comments">
+                                    <ul class="inline">
+                                        <li><i class="fa-calendar fas"></i>Posted on {{#showDate
+                                            page.created_at}}{{/showDate}}</li>
+                                        <li><i class="fas fa-fire"></i>{{page.view_count}} Views</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <img src="{{SITE_URL}}{{page.image}}" class="ilazy" data-srcset="{{SITE_URL}}{{page.image}}"
+                        class="lazy lz1 w-100 " alt="Genshin Impact: The Millennial Mountains Full Walkthrough Image" />
+
+                    <div class="col-md-12 mb-5 mt-3">
+                        <!-- 728 × 90 px -->
+                        {{#showMobile isMobile}}
+                        {{> common/300_250}}
+                        {{else}}
+                        {{> common/728_90}}
+                        {{/showMobile}}
+                    </div>
+                    <div class="p-4 content_wrapper">
+                        {{{page.content}}}
+                        <a href="{{SITE_URL}}/web-story/article/{{page.slug}}" title="{{page.title}}"
+                            class="btn btn-primary">{{page.title}} View Story</a>
+                    </div>
+
+                    <div class="space-20"></div>
+
+                    <div class="row ">
+                        <div class="col-lg-12">
+                            <div class="tags">
+                                <ul class="inline">
+                                    <li class="tag_list"><i class="fas fa-tag"></i> tags</li>
+                                    {{#each post_cat_list}}
+                                    <li><a class="mb-2 text-capitalize" href="{{SITE_URL}}/{{slug}}">{{title}}</a>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row ">
+                        <div class="col-lg-12">
+                            <ul class="inline">
+                                {{#each post_cat_list}}
+                                <li><a class="mb-2 text-capitalize btn btn-primary mr-2 mb-2"
+                                        href="{{SITE_URL}}/web-story/category/{{slug}}">{{title}}</a>
+                                </li>
+                                {{/each}}
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="row p-4">
+                        <div class="col-lg-6 align-self-center">
+                            <div class="author">
+                                <div class="author_img">
+                                    <div class="author_img_wrap">
+                                        <img src="{{SITE_URL}}/thumb/small\images/DEFAULT_IMG.webp" class="ilazy"
+                                            data-srcset="{{SITE_URL}}/images/newsprk/assets/img/author/author2.png"
+                                            alt="{{SITE_NAME}}">
+                                    </div>
+                                </div> <a href="#">{{SITE_NAME}}</a>
+                                <ul>
+                                    <li><a href="#">{{#showDate
+                                            page.created_at}}{{/showDate}}</a>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 align-self-center">
+                            <div class="author_social inline text-right">
+                                <ul>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fab fa-youtube"></i></a>
+                                    </li>
+                                    <li><a href="#"><i class="fab fa-instagram"></i></a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="col-md-12 mb-5 mt-3">
+                            <!-- 728 × 90 px -->
+                            {{#showMobile isMobile}}
+                            {{> common/300_250}}
+                            {{else}}
+                            {{> common/728_90}}
+                            {{/showMobile}}
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="space-30"></div>
+
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                    <div class="trending_widget mb30 text-center">
+                        <a href="{{SITE_URL}}/web-story/article/{{page.slug}}" title="{{page.title}}"
+                            class="btn btn-primary">
+                            {{page.title}} View Story</a>
+                    </div>
+
+                    <div class="trending_widget mb30">
+                        <h2 class="widget-title">Latest in {{SITE_NAME}}</h2>
+                        {{#each popular}}
+                        {{> common/single_small_list post=this size="small" }}
+                        {{/each}}
+
+                    </div>
+                    <div class="widget category mb30">
+                        <div class="row">
+                            <div class="col-12 align-self-center">
+                                <h2 class="widget-title">Trending Category</h2>
+                            </div>
+                        </div>
+                        <ul>
+                            {{#each categories}}
+                            <li>
+                                <a class="text-capitalize" href="{{ SITE_URL }}/{{data.slug}}">{{ data.title }} <span>
+                                        ({{data.post_count}}) </span> </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <div class="row padding20 white_bg mb-5">
+                <div class="col-md-12">
+                </div>
+                <div class="heading pl-2">
+                    <h2 class="widget-title">Latest Web Story</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+
+                        {{#each latest_20}}
+                        {{#ifCondOper @index "<" 12}} <div class="col-md-3">
+                            {{> common/web_story post=this size="medium" }}
+                    </div>
+                    {{/ifCondOper}}
+                    {{/each}}
+
+
+                </div>
+            </div>
+        </div>
+        <div class="row padding20 white_bg mb-5">
+            <div class="heading pl-2">
+                <h2 class="widget-title">Latest 20 Post</h2>
+            </div>
+            <div class="col-md-12">
+                <div class="row mt-4">
+                    {{#if trending_data}}
+                    {{#each trending_data}}
+                    <div class="col-md-2">
+                        <div class="single_post type19 border-radious5 white_bg">
+                            <div class="post_img">
+                                <div class="img_wrap">
+                                    <a href="{{SITE_URL}}/web-story/trending/{{slug}}">
+                                        <img class=" w-100 ilazy" src="{{SITE_URL}}/thumb/small\images/DEFAULT_IMG.webp"
+                                            data-srcset="{{SITE_URL}}/thumb/small{{image}}" alt="{{title}} Web Story">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="single_post_text pt-2 pb-2">
+                                <p class="post-p"><a href="{{SITE_URL}}/web-story/trending/{{slug}}">{{title}} Web
+                                        Story </a></p>
+                            </div>
+                        </div>
+                    </div>
+                    {{/each}}
+                    {{/if}}
+
+                </div>
+                <div class="row mt-4">
+                    {{#each latest_20}}
+                    <div class="col-md-4">
+                        {{> common/single_small_list post=this size="small" }}
+                    </div>
+                    {{/each}}
+
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+</div>

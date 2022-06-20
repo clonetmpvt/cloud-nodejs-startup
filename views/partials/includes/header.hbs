@@ -1,0 +1,154 @@
+<!--::::: PRELOADER END :::::::-->
+<!--::::: TOP BAR START :::::::-->
+<div class="topbar white_bg">
+    <div class="container">
+        <div class="row pt-2 pb-2">
+            <div class="col-md-8 align-self-center ">
+                <ul class="inline">
+                    <li><a class="text-dark mr-2 social-icon facebook-icon text-xs-center color-white" target="_blank"
+                            href="#">Home</a></li>
+                    <li><a class="text-dark mr-2 social-icon twitter-icon text-xs-center color-white" target="_blank"
+                            href="#">Contact Us</a></li>
+                    <li><a class="text-dark mr-2 social-icon pinterest-icon text-xs-center color-white" target="_blank"
+                            href="#">About Us</a></li>
+                    <li><a class="text-dark mr-2 social-icon instagram-icon text-xs-center color-white" target="_blank"
+                            href="{{ SITE_URL }}/privacy-policy">Privacy Policy</a></li>
+                    <li><a class="text-dark mr-2 social-icon instagram-icon text-xs-center color-white" target="_blank"
+                            href="{{ SITE_URL }}/archive">Archive</a></li>
+                    <li><a class="text-dark mr-2 social-icon instagram-icon text-xs-center color-white" target="_blank"
+                            href="{{ SITE_URL }}/trending">Trending</a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 align-self-center">
+                <div class="top_date_social text-right">
+                    <div class="social1">
+                        <ul class="inline">
+                            <li><a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fab fa-youtube"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fab fa-instagram"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--::::: TOP BAR END :::::::-->
+<div class="border_black"></div>
+<!--::::: LOGO AREA START  :::::::-->
+<div class="logo_area white_bg">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 align-self-center">
+                <div class="logo">
+
+                    <a href="{{ SITE_URL }}">
+                        <div class="logo_text h2 text-dark"> {{SITE_NAME}}</div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-9 align-self-center text-center">
+                <div class="pl-auto">
+
+                    <!-- 728 × 90 px -->
+                    {{#showMobile isMobile}}
+                    {{> common/300_250}}
+                    {{else}}
+                    {{> common/728_90}}
+                    {{/showMobile}}
+
+
+
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!--::::: LOGO AREA END :::::::-->
+
+<!--::::: MENU AREA START  :::::::-->
+{{!-- <div class="container">
+    <div class="main-menu">
+        <div class="main-nav clearfix is-ts-sticky">
+            <div class="row justify-content-between">
+                <div class="col-12 col-lg-12 align-self-center">
+                    <div class="newsprk_nav stellarnav">
+                        <ul id="newsprk_menu">
+
+                            <li>
+                                <a class="nav-link" href="{{ SITE_URL }}">Home</a>
+                            </li>
+                            {{#each categories}}
+                            {{#ifCondOper @index "<" 12}}<li><a href="{{ SITE_URL }}/{{data.slug}}">{{data.title}}</a>
+                                </li>
+                                {{/ifCondOper}}
+                                {{/each}}
+
+                                <li><a href="#">Categories <i class="fal fa-angle-down"></i></a>
+                                    <ul>
+                                        {{#each categories}}
+                                        {{#ifCondOper @index ">" 12}}<li><a
+                                                href="{{ SITE_URL }}/{{data.slug}}">{{data.title}}</a>
+                                        </li>
+                                        {{/ifCondOper}}
+                                        {{/each}}
+                                    </ul>
+
+                                </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div> --}}
+<!--::::: MENU AREA END :::::::-->
+<div class="container">
+    <header id="header" class="container-fluid border-bottom shadow-sm bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" id="nav" role="navigation">
+            <button id="navbar-toggler-id" type="button" class="navbar-toggler"><span
+                    class="navbar-toggler-icon"></span></button>
+            <div id="navbar-collapse-id" class="collapse navbar-collapse">
+                <ul class="navbar-nav w-100">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ SITE_URL }}">Home</a>
+                    </li>
+                    {{#each categories}}
+                    {{#ifCondOper @index "<" 12}} <li class="nav-item"><a href="{{ SITE_URL }}/{{data.slug}}"
+                            class="nav-link">{{data.title}}</a>
+                        </li>
+                        {{/ifCondOper}}
+                        {{/each}}
+
+
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle">Explore Technologies</a>
+                            <div class="dropdown-menu sub_item_wrapper shadow p-2">
+                                <div class="row">
+                                    {{#each categories}}
+                                    {{#ifCondOper @index ">" 12}}
+                                    <div class="col-md-12">
+                                        <a class="d-inline-block w-100 mb-2"
+                                            href="{{ SITE_URL }}/{{data.slug}}">{{data.title}}</a>
+                                    </div>
+                                    {{/ifCondOper}}
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </li>
+
+                </ul>
+            </div>
+        </nav>
+    </header>
+</div>

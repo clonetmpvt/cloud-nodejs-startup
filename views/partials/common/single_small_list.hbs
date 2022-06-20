@@ -1,0 +1,22 @@
+<div class="single_post type10 type16 widgets_small mb15">
+    <div class="post_img">
+        <div class="img_wrap">
+            <a href="{{ SITE_URL }}/article/{{post.slug}}">
+                <img src="{{SITE_URL}}/thumb/{{size}}\images/DEFAULT_IMG.webp" class="ilazy"
+                    data-srcset="{{ SITE_URL }}/thumb/{{ size }}{{ post.image }}" alt="{{ post.title
+                }}">
+            </a>
+        </div>
+    </div>
+    <div class="single_post_text">
+        <h4><a href="{{ SITE_URL }}/article/{{post.slug}}">{{ post.title
+                }}</a></h4>
+        <div class="meta3"><a href="{{ SITE_URL }}/{{#catShow post.category_slug}}{{/catShow}}">{{#catShow
+                post.category}}{{/catShow}}</a>
+            <span class="small ml-2">{{#showDate post.created_at}}{{/showDate}}</span>
+        </div>
+        <div class="space-5"></div>
+        <div class="border_black"></div>
+        <div class="space-15"></div>
+    </div>
+</div>

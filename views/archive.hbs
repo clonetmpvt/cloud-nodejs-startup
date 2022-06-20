@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 shadow61 white_bg mt-4 p-5">
+            <h1 class="mb-5">Category Archive</h1>
+            <div class="row ">
+                {{#each all_category}}
+                <div class="col-md-3 mb-3 ">
+                    <a class="text-capitalize" href="{{SITE_URL}}/{{slug}}">{{ title }} <span>
+                            ({{ post_count }}) </span> </a>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+</div>

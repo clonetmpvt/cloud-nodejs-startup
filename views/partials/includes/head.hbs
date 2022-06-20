@@ -1,0 +1,157 @@
+<meta charset="utf-8" />
+<title>{{ page.seo.title }}</title>
+<meta property="description" name="description" content="{{ page.seo.description }}" />
+<meta property="keywords" name="keywords" content="{{ page.seo.keywords }}" />
+<link rel="canonical" rel="canonical" href="{{page.canonical}}" />
+<link rel="manifest" href="{{SITE_URL}}/images/manifest.json" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta data-hid="mobile-web-app-capable" name="mobile-web-app-capable" content="yes" />
+<meta data-hid="apple-mobile-web-app-title" name="apple-mobile-web-app-title" content="{{SITE_NAME}}" />
+<meta data-hid="theme-color" name="theme-color" content="#553a7d" />
+<meta data-hid="og:type" name="og:type" property="og:type" content="website" />
+<meta data-hid="og:title" name="og:title" property="og:title" content="{{ page.seo.title }}" />
+
+<meta data-hid="og:site_name" name="og:site_name" property="og:site_name" content="{{SITE_NAME}}" />
+<meta name="og:description" property="og:description" content="{{ page.seo.description }}" />
+<meta name="og:image" property="og:image" content="{{SITE_URL}}/thumb/small\images/DEFAULT_IMG.webp" />
+
+<link rel="icon" type="image/x-icon" href="{{SITE_URL}}/favicon.ico" />
+<link rel="shortcut icon" href="{{SITE_URL}}/thumb/icon_512/images/logo.webp" sizes="512x512" />
+<link rel="apple-touch-icon" href="{{SITE_URL}}/thumb/icon_512/images/logo.webp" sizes="512x512" />
+
+{{#if page.ampUrl}}
+<link rel="amphtml" href="{{SITE_URL}}/article/{{page.slug}}/amp" />
+{{/if}}
+
+<meta name="robots" content="max-image-preview:large">
+<!-- Primary Meta Tags -->
+<meta name="title" content="{{ page.seo.title }}">
+
+<link rel="alternate" type="application/rss+xml" title="{{SITE_NAME}} &raquo; Feed" href="{{SITE_URL}}/feed" />
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{SITE_URL}}">
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image">
+<meta property="twitter:url" content="{{SITE_URL}}">
+<meta property="twitter:title" content="{{ page.seo.title }}">
+<meta property="twitter:description" content="{{ page.seo.description }}">
+<meta property="twitter:image" content="{{SITE_URL}}/thumb/large\images/DEFAULT_IMG.webp">
+
+{{#if page.json_ld}}
+<script type="application/ld+json">
+    {{{page.json_ld}}}
+</script>
+{{/if}}
+{{!-- {{> includes/style }} --}}
+{{#if page_css}}
+<link rel="stylesheet" href="{{SITE_URL}}/images/newsprk/assets/css/{{page_css}}.css">
+{{else}}
+<link rel="stylesheet" href="{{SITE_URL}}/images/newsprk/assets/css/compress.css">
+{{/if}}
+{{!--
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet"> --}}
+
+{{!--
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" /> --}}
+
+<style>
+    /* roboto-regular - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 400;
+        src: url('/images/fonts/roboto-v29-latin-regular.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('/images/fonts/roboto-v29-latin-regular.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('/images/fonts/roboto-v29-latin-regular.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('/images/fonts/roboto-v29-latin-regular.woff') format('woff'),
+            /* Modern Browsers */
+            url('/images/fonts/roboto-v29-latin-regular.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('/images/fonts/roboto-v29-latin-regular.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    /* roboto-500 - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 500;
+        src: url('/images/fonts/roboto-v29-latin-500.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('/images/fonts/roboto-v29-latin-500.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('/images/fonts/roboto-v29-latin-500.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('/images/fonts/roboto-v29-latin-500.woff') format('woff'),
+            /* Modern Browsers */
+            url('/images/fonts/roboto-v29-latin-500.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('/images/fonts/roboto-v29-latin-500.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    /* roboto-700 - latin */
+    @font-face {
+        font-family: 'Roboto';
+        font-style: normal;
+        font-weight: 700;
+        src: url('/images/fonts/roboto-v29-latin-700.eot');
+        /* IE9 Compat Modes */
+        src: local(''),
+            url('/images/fonts/roboto-v29-latin-700.eot?#iefix') format('embedded-opentype'),
+            /* IE6-IE8 */
+            url('/images/fonts/roboto-v29-latin-700.woff2') format('woff2'),
+            /* Super Modern Browsers */
+            url('/images/fonts/roboto-v29-latin-700.woff') format('woff'),
+            /* Modern Browsers */
+            url('/images/fonts/roboto-v29-latin-700.ttf') format('truetype'),
+            /* Safari, Android, iOS */
+            url('/images/fonts/roboto-v29-latin-700.svg#Roboto') format('svg');
+        /* Legacy iOS */
+    }
+
+    html,
+    html *,
+    body * {
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .logo {
+        max-width: 5000px !important;
+    }
+
+    .theme-3 .navbar-toggler {
+        color: #fff;
+        padding: 8px 15px;
+        background: #e74907;
+        position: absolute;
+        top: -55px;
+        z-index: 9;
+        margin-left: -15px;
+    }
+
+    @media only screen and (max-width: 1024px) {
+        .theme-3 .navbar {
+            width: 90%;
+        }
+    }
+
+    .navbar-dark .navbar-nav .nav-link {
+        font-size: 0.9rem;
+        text-transform: capitalize;
+    }
+</style>
+
+{{#showGoogleAds}}
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5236527217763874"
+    crossorigin="anonymous"></script>
+{{/showGoogleAds}}

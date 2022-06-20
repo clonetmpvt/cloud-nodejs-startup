@@ -1,0 +1,202 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- 728 × 90 px -->
+            {{#showMobile isMobile}}
+            {{> common/300_250}}
+            {{else}}
+            {{> common/728_90}}
+            {{/showMobile}}
+        </div>
+        <div class="col-md-12">
+            <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                <div class="row">
+                    <div class="col-md-8">
+                        <div class="heading">
+                            <h1 class="widget-title">Latest News In {{SITE_NAME}}</h1>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                {{> common/single_grid post=first size="large" }}
+                            </div>
+                            <div class="col-md-6">
+                                {{#each sub_main}}
+                                {{> common/single_small_list post=this size="small" }}
+                                {{/each}}
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="heading pl-2">
+                            <h2 class="widget-title">Popular News</h2>
+                        </div>
+                        <div class="col-md-12">
+                            {{#each most_view_seven}}
+                            {{> common/single_small_list post=data size="small" }}
+                            {{/each}}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-12">
+            <!-- 728 × 90 px -->
+            {{#showMobile isMobile}}
+            {{> common/300_250}}
+            {{else}}
+            {{> common/728_90}}
+            {{/showMobile}}
+        </div>
+
+        <div class="col-md-12">
+            <div class="row padding20 white_bg mb-5">
+                <div class="heading pl-2">
+                    <h2 class="widget-title">Latest Web Story</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="row">
+                        {{#each latest_20}}
+                        {{#ifCondOper @index "<" 12}} <div class="col-md-2">
+                            {{> common/web_story post=this size="medium" }}
+                    </div>
+                    {{/ifCondOper}}
+                    {{/each}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="col-md-12">
+        <!-- 728 × 90 px -->
+        {{#showMobile isMobile}}
+        {{> common/300_250}}
+        {{else}}
+        {{> common/728_90}}
+        {{/showMobile}}
+    </div>
+    <div class="col-md-12 ">
+
+        <div class="row">
+            <div class="col-md-4 ">
+                <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                    <div class="heading">
+                        <h3 class="widget-title">Weekly Trending In {{SITE_NAME}}</h3>
+                    </div>
+                    {{#each three_day_three}}
+                    {{> common/single_small_list post=this size="small" }}
+                    {{/each}}
+
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                    <div class="heading">
+                        <h3 class="widget-title">Monthly Trending In {{SITE_NAME}}</h3>
+                    </div>
+                    {{#each weekly_three}}
+                    {{> common/single_small_list post=this size="small" }}
+                    {{/each}}
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                    <div class="heading">
+                        <h3 class="widget-title">All Time Trending In {{SITE_NAME}}</h3>
+                    </div>
+                    {{#each all_time_three}}
+                    {{> common/single_small_list post=this size="small" }}
+                    {{/each}}
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="col-md-12 text-center">
+        <!-- 728 × 90 px -->
+        {{#showMobile isMobile}}
+        {{> common/300_250}}
+        {{else}}
+        {{> common/728_90}}
+        {{/showMobile}}
+    </div>
+
+    <div class="col-md-12 ">
+        <div class="white_bg tranding3 padding20 border-radious5 mb30">
+            <div class="row">
+                <div class="col-md-12 ">
+                    <div class="heading">
+                        <h3 class="widget-title">Latest Articles in {{SITE_NAME}}</h3>
+                    </div>
+                    <div class="row">
+                        {{#each latest_20}}
+                        <div class="col-md-6 mb-3">
+                            {{> common/single_category post=this size="medium" }}
+                        </div>
+                        {{#everyFour @index}}
+                        <div class="col-md-12 mb-3">
+                            {{#showMobile isMobile}}
+                            {{> common/300_250}}
+                            {{else}}
+                            {{> common/728_90}}
+                            {{/showMobile}}
+                        </div>
+                        {{/everyFour}}
+                        {{/each}}
+                    </div>
+                    <div class="row w-100">
+                        <div class="col-12">
+                            <div class="cpagination padding5050">
+                                <nav aria-label="Page navigation example pl-3">
+                                    <ul class="pagination justify-content-start">
+                                        <li class="page-item"><span aria-current="page"
+                                                class="page-link current">1</span></li>
+                                        <li class="page-item"><a class="page-link" href="{{ SITE_URL }}/page/2">2</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="{{ SITE_URL }}/page/3">3</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link" href="{{ SITE_URL }}/page/4">4</a>
+                                        </li>
+                                        <li class="page-item"><a class="page-link">...</a></li>
+                                        <li class="page-item"><a class="next page-link"
+                                                href="{{ SITE_URL }}/page/595">595</a></li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <div class="row mt-4">
+            {{#if trending_data}}
+            {{#each trending_data}}
+            <div class="col-md-2">
+                <div class="single_post type19 border-radious5 white_bg">
+                    <div class="post_img">
+                        <div class="img_wrap">
+                            <a href="{{SITE_URL}}/web-story/trending/{{slug}}">
+                                <img class=" w-100 ilazy" src="{{SITE_URL}}/thumb/small\images/DEFAULT_IMG.webp"
+                                    data-srcset="{{SITE_URL}}/thumb/small{{image}}" alt="{{title}} Web Story">
+                            </a>
+                        </div>
+                    </div>
+                    <div class="single_post_text pt-2 pb-2">
+                        <p class="post-p"><a href="{{SITE_URL}}/web-story/trending/{{slug}}">{{title}} Web
+                                Story </a></p>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+            {{/if}}
+
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,65 @@
+{{!--
+<script src="{{ SITE_URL }}/images/newsprk/assets/js/compress.js"></script> --}}
+<script type="text/javascript">
+    /*if ("serviceWorker" in navigator)
+        try {
+            navigator.serviceWorker.register("/sw.js"), console.log("SW registered");
+        } catch (e) {
+            console.log(e);
+        }
+    var e = document.querySelectorAll("pre");
+    [].forEach.call(e, function (e) {
+        e.classList.remove("prettyprint"), e.classList.add("prettyprint");
+    }); */
+    var t = [].slice.call(document.querySelectorAll("img.ilazy"));
+    if ("IntersectionObserver" in window) {
+        let e = new IntersectionObserver(function (t, s) {
+            t.forEach(function (t) {
+                if (t.isIntersecting) {
+                    let s = t.target;
+                    (s.src = s.dataset.src), (s.srcset = s.dataset.srcset), s.classList.remove("ilazy"), e.unobserve(s);
+                }
+            });
+        });
+        t.forEach(function (t) {
+            e.observe(t);
+        });
+    }
+    var s = document.getElementsByClassName("dropdown-menu");
+    [].forEach.call(s, function (e) {
+        e.classList.remove("show");
+    }),
+        document.getElementById("navbar-collapse-id").classList.remove("show");
+    for (
+        var o = document.getElementsByClassName("dropdown-toggle"),
+        n =
+            ((s = document.getElementsByClassName("dropdown-menu")),
+                function () {
+                    var e = this.parentNode.getElementsByClassName("dropdown-menu")[0];
+                    console.log(e),
+                        e.classList.contains("show")
+                            ? [].forEach.call(s, function (e) {
+                                e.classList.remove("show");
+                            })
+                            : ([].forEach.call(s, function (e) {
+                                e.classList.remove("show");
+                            }),
+                                e.classList.add("show"));
+                }),
+        a = 0;
+        a < o.length;
+        a++
+    )
+        o[a].addEventListener("click", n, !1);
+    document.getElementById("navbar-toggler-id").addEventListener("click", function () {
+        var e = document.getElementById("navbar-collapse-id");
+        e.classList.contains("show") ? e.classList.remove("show") : e.classList.add("show");
+    }),
+        (WebFontConfig = { google: { families: ["Roboto:400,500"] } }),
+        (function () {
+            /* var e = document.createElement("script");
+             (e.src = "https://ajax.googleapis.com/ajax/libs/webfont/1/webfont.js"), (e.type = "text/javascript"), (e.async = "true");
+             var t = document.getElementsByTagName("script")[0];
+             t.parentNode.insertBefore(e, t); */
+        })();
+</script>

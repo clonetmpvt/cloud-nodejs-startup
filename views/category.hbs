@@ -1,0 +1,151 @@
+<!--::::: INNER TABLE AREA START :::::::-->
+<div class="inner_table">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <div class="bridcrumb"> <a href="{{ SITE_URL }}">Home</a> / {{ page.title }}</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--::::: INNER TABLE AREA END :::::::-->
+<!--::::: ARCHIVE AREA START :::::::-->
+<div class="archives">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12 mb-5">
+                <!-- 728 × 90 px -->
+                {{#showMobile isMobile}}
+                {{> common/300_250}}
+                {{else}}
+                {{> common/728_90}}
+                {{/showMobile}}
+            </div>
+            <div class="col-md-6 col-lg-8">
+                <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                    <div class="businerss_news">
+                        <div class="row">
+                            <div class="col-12 align-self-center">
+                                <div class="categories_title">
+                                    <h5>Category: <a href="#">{{ page.title }}</a></h5>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-12">
+                                {{#each category_post}}
+                                {{> common/single_category post=this size="medium" }}
+                                {{#everyFour @index}}
+                                <div class="col-md-12 mb-3">
+                                    {{#showMobile isMobile}}
+                                    {{> common/300_250}}
+                                    {{else}}
+                                    {{> common/728_90}}
+                                    {{/showMobile}}
+                                </div>
+                                {{/everyFour}}
+                                {{/each}}
+                            </div>
+
+                            <div class="row w-100">
+                                <div class="col-12">
+                                    <div class="cpagination padding5050">
+                                        <nav aria-label="Page navigation example pl-5">
+                                            <ul class="pagination justify-content-start pl-4">
+                                                <li class="page-item w-100"><a
+                                                        class="next float-left page-link w-auto pl-5 pr-5"
+                                                        href="{{SITE_URL}}/{{slug}}/page/{{prevPageNumber}}">Previous
+                                                        Page</a>
+                                                </li>
+                                                <li class="page-item w-100"><a
+                                                        class="next page-link float-right w-auto pl-5 pr-5"
+                                                        href="{{SITE_URL}}/{{slug}}/page/{{nextPageNumber}}">Next
+                                                        Page</a>
+                                                </li>
+                                            </ul>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4">
+                <div class="white_bg tranding3 padding20 border-radious5 mb30">
+                    <div class="trending_widget mb30 text-center">
+                        <a href="{{ SITE_URL }}/web-story/category/{{ slug }}" title="{{page.title}}"
+                            class="btn btn-primary"> {{page.title}} View Story</a>
+                    </div>
+                    <div class="trending_widget mb30">
+                        <h2 class="widget-title">Popular in {{page.title}}</h2>
+                        {{#each popular}}
+                        {{> common/single_small_list post=this size="small" }}
+                        {{/each}}
+                    </div>
+
+                    <div class="widget category mb30">
+                        <div class="row">
+                            <div class="col-12 align-self-center">
+                                <h2 class="widget-title">Trending Category</h2>
+                            </div>
+                        </div>
+                        <ul>
+                            {{#each categories}}
+                            <li>
+                                <a class="text-capitalize" href="{{ SITE_URL }}/{{data.slug}}">{{ data.title }} <span>
+                                        ({{data.post_count}}) </span> </a>
+                            </li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12">
+                </div>
+                <div class="heading pl-2">
+                    <h2 class="widget-title">Latest 20</h2>
+                </div>
+                <div class="col-md-12">
+                    <div class="row mt-4">
+                        {{#if trending_data}}
+                        {{#each trending_data}}
+                        <div class="col-md-2">
+                            <div class="single_post type19 border-radious5 white_bg">
+                                <div class="post_img">
+                                    <div class="img_wrap">
+                                        <a href="{{SITE_URL}}/web-story/trending/{{slug}}">
+                                            <img class=" w-100 ilazy"
+                                                src="{{SITE_URL}}/thumb/small\images/DEFAULT_IMG.webp"
+                                                data-srcset="{{SITE_URL}}/thumb/small{{image}}"
+                                                alt="{{title}} Web Story">
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="single_post_text pt-2 pb-2">
+                                    <p class="post-p"><a href="{{SITE_URL}}/web-story/trending/{{slug}}">{{title}} Web
+                                            Story </a></p>
+                                </div>
+                            </div>
+                        </div>
+                        {{/each}}
+                        {{/if}}
+
+                    </div>
+                    <div class="row mt-4">
+                        {{#each latest_20}}
+                        <div class="col-md-4">
+                            {{> common/single_small_list post=this size="small" }}
+                        </div>
+                        {{/each}}
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--::::: ARCHIVE AREA END :::::::-->

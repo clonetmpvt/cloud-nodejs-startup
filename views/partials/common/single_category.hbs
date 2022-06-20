@@ -1,0 +1,21 @@
+<div class="single_post post_type3 post_type12 mb30">
+    <div class="post_img">
+        <div class="img_wrap">
+            <a href="{{ SITE_URL }}/article/{{post.slug}}">
+                <img src="{{SITE_URL}}/thumb/{{size}}\images/DEFAULT_IMG.webp" class="ilazy"
+                    data-srcset="{{ SITE_URL }}/thumb/{{size}}{{ post.image }}" alt="{{post.title}}">
+            </a>
+        </div>
+    </div>
+    <div class="single_post_text">
+        <div class="meta3"> <a href="{{ SITE_URL }}/{{#catShow post.category_slug}}{{/catShow}}">{{#catShow
+                post.category}}{{/catShow}}</a>
+            <span class="small ml-2">{{#showDate post.created_at}}{{/showDate}}</span>
+        </div>
+        <h4><a href="{{ SITE_URL }}/article/{{post.slug}}">{{post.title}}</a></h4>
+        <div class="space-10"></div>
+        <p class="post-p">{{post.sub_title}}</p>
+        <div class="space-20"></div> <a href="{{ SITE_URL }}/article/{{post.slug}}" class="readmore">Read
+            more</a>
+    </div>
+</div>
